@@ -67,6 +67,9 @@ public class frmUser extends javax.swing.JFrame {
         RECARGAR1 = new javax.swing.JButton();
         RECARGAR2 = new javax.swing.JButton();
         RECARGAR3 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        RECARGAR4 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(720, 430));
@@ -329,7 +332,7 @@ public class frmUser extends javax.swing.JFrame {
         });
 
         RECARGAR2.setFont(new java.awt.Font("Lucida Sans", 0, 10)); // NOI18N
-        RECARGAR2.setText("VER ULTIMOS MOVIMIENTOS");
+        RECARGAR2.setText("VER TARJETAS");
         RECARGAR2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RECARGAR2ActionPerformed(evt);
@@ -345,32 +348,58 @@ public class frmUser extends javax.swing.JFrame {
             }
         });
 
+        jButton5.setFont(new java.awt.Font("Lucida Sans", 0, 10)); // NOI18N
+        jButton5.setText("IMPRIMIR USUARIOS");
+
+        RECARGAR4.setFont(new java.awt.Font("Lucida Sans", 0, 10)); // NOI18N
+        RECARGAR4.setText("VER MOVIMIENTOS");
+        RECARGAR4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RECARGAR4ActionPerformed(evt);
+            }
+        });
+
+        jButton6.setFont(new java.awt.Font("Lucida Sans", 0, 10)); // NOI18N
+        jButton6.setText("LIMPIAR");
+        jButton6.setPreferredSize(new java.awt.Dimension(120, 21));
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
         org.jdesktop.layout.GroupLayout panBotonesLayout = new org.jdesktop.layout.GroupLayout(panBotones);
         panBotones.setLayout(panBotonesLayout);
         panBotonesLayout.setHorizontalGroup(
             panBotonesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(panBotonesLayout.createSequentialGroup()
                 .add(28, 28, 28)
+                .add(panBotonesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                    .add(panBotonesLayout.createSequentialGroup()
+                        .add(jButton2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 126, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(18, 18, 18)
+                        .add(jButton5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 158, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(panBotonesLayout.createSequentialGroup()
+                        .add(jButton3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 156, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(18, 18, 18)
+                        .add(jButton4, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .add(77, 77, 77)
                 .add(panBotonesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(panBotonesLayout.createSequentialGroup()
-                        .add(108, 108, 108)
-                        .add(jButton2)
-                        .add(166, 166, 166)
-                        .add(RECARGAR)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 133, Short.MAX_VALUE)
-                        .add(RECARGAR1)
-                        .add(30, 30, 30))
+                        .add(RECARGAR2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 129, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(18, 18, 18)
+                        .add(RECARGAR4, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .add(panBotonesLayout.createSequentialGroup()
-                        .add(jButton3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(57, 57, 57)
-                        .add(jButton4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .add(RECARGAR2)
-                        .add(88, 88, 88))))
-            .add(panBotonesLayout.createSequentialGroup()
-                .add(325, 325, 325)
+                        .add(RECARGAR)
+                        .add(28, 28, 28)
+                        .add(RECARGAR1)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 14, Short.MAX_VALUE)
+                        .add(jButton6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 75, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                .add(30, 30, 30))
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, panBotonesLayout.createSequentialGroup()
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .add(RECARGAR3)
-                .add(0, 0, Short.MAX_VALUE))
+                .add(323, 323, 323))
         );
         panBotonesLayout.setVerticalGroup(
             panBotonesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -379,12 +408,15 @@ public class frmUser extends javax.swing.JFrame {
                 .add(panBotonesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jButton2)
                     .add(RECARGAR)
-                    .add(RECARGAR1))
+                    .add(RECARGAR1)
+                    .add(jButton5)
+                    .add(jButton6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(panBotonesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jButton3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jButton4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(RECARGAR2))
+                    .add(RECARGAR2)
+                    .add(RECARGAR4))
                 .add(18, 18, 18)
                 .add(RECARGAR3)
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -427,6 +459,14 @@ public class frmUser extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_RECARGAR3ActionPerformed
 
+    private void RECARGAR4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RECARGAR4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RECARGAR4ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -467,9 +507,12 @@ public class frmUser extends javax.swing.JFrame {
     private javax.swing.JButton RECARGAR1;
     private javax.swing.JButton RECARGAR2;
     private javax.swing.JButton RECARGAR3;
+    private javax.swing.JButton RECARGAR4;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
