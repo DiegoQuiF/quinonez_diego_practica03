@@ -29,28 +29,185 @@ public class frmUser extends javax.swing.JFrame {
         panTitulo = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         panControles = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jTextField6 = new javax.swing.JTextField();
+        jTextField7 = new javax.swing.JTextField();
+        jTextField8 = new javax.swing.JTextField();
         panBotones = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(720, 430));
 
         panTitulo.setBackground(new java.awt.Color(255, 255, 255));
-        panTitulo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Lucida Sans", 1, 28)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(204, 0, 51));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("MENU DE USUARIO");
-        panTitulo.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 60));
+
+        org.jdesktop.layout.GroupLayout panTituloLayout = new org.jdesktop.layout.GroupLayout(panTitulo);
+        panTitulo.setLayout(panTituloLayout);
+        panTituloLayout.setHorizontalGroup(
+            panTituloLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jLabel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 720, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+        );
+        panTituloLayout.setVerticalGroup(
+            panTituloLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jLabel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 60, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+        );
 
         getContentPane().add(panTitulo, java.awt.BorderLayout.NORTH);
 
         panControles.setBackground(new java.awt.Color(255, 255, 255));
-        panControles.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
+        jLabel2.setText("A. Paterno");
+
+        jLabel3.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
+        jLabel3.setText("A. Materno");
+
+        jLabel4.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
+        jLabel4.setText("Nombres");
+
+        jLabel5.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
+        jLabel5.setText("Tipo Doc.");
+
+        jLabel6.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
+        jLabel6.setText("Documento");
+
+        jLabel8.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
+        jLabel8.setText("Edad");
+
+        jLabel9.setFont(new java.awt.Font("Lucida Sans", 3, 12)); // NOI18N
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setText("REGISTRAR USUARIO");
+
+        jLabel10.setFont(new java.awt.Font("Lucida Sans", 3, 12)); // NOI18N
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setText("REGISTRAR NUEVA TARJETA");
+
+        jLabel7.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
+        jLabel7.setText("Nro. Celular");
+
+        jTextField1.setText("jTextField1");
+
+        jTextField2.setText("jTextField1");
+
+        jTextField3.setText("jTextField1");
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jTextField6.setText("jTextField1");
+
+        jTextField7.setText("jTextField1");
+
+        jTextField8.setText("jTextField1");
+
+        org.jdesktop.layout.GroupLayout panControlesLayout = new org.jdesktop.layout.GroupLayout(panControles);
+        panControles.setLayout(panControlesLayout);
+        panControlesLayout.setHorizontalGroup(
+            panControlesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(panControlesLayout.createSequentialGroup()
+                .add(29, 29, 29)
+                .add(panControlesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                    .add(panControlesLayout.createSequentialGroup()
+                        .add(jLabel7)
+                        .add(60, 60, 60)
+                        .add(jTextField8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 170, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(panControlesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                        .add(panControlesLayout.createSequentialGroup()
+                            .add(panControlesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                .add(panControlesLayout.createSequentialGroup()
+                                    .add(panControlesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                                        .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel8)
+                                        .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel3)
+                                        .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel2))
+                                    .add(0, 0, Short.MAX_VALUE))
+                                .add(panControlesLayout.createSequentialGroup()
+                                    .add(panControlesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                        .add(jLabel4)
+                                        .add(jLabel5)
+                                        .add(jLabel6))
+                                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .add(panControlesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                                .add(jTextField2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 170, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(jTextField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 170, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(jTextField3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 170, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(jComboBox1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 170, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(jTextField6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 170, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(jTextField7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 170, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                        .add(jLabel9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 300, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 59, Short.MAX_VALUE)
+                .add(jLabel10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 300, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(32, 32, 32))
+        );
+        panControlesLayout.setVerticalGroup(
+            panControlesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(panControlesLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(panControlesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jLabel9)
+                    .add(jLabel10))
+                .add(18, 18, 18)
+                .add(panControlesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(panControlesLayout.createSequentialGroup()
+                        .add(jTextField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                        .add(panControlesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                            .add(jTextField2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(jLabel3)))
+                    .add(jLabel2))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(panControlesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jTextField3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jLabel4))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(panControlesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jComboBox1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jLabel5))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(panControlesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jTextField6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jLabel6))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(panControlesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jLabel8)
+                    .add(jTextField7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(panControlesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jLabel7)
+                    .add(jTextField8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(17, Short.MAX_VALUE))
+        );
+
         getContentPane().add(panControles, java.awt.BorderLayout.CENTER);
 
         panBotones.setBackground(new java.awt.Color(255, 255, 255));
-        panBotones.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        org.jdesktop.layout.GroupLayout panBotonesLayout = new org.jdesktop.layout.GroupLayout(panBotones);
+        panBotones.setLayout(panBotonesLayout);
+        panBotonesLayout.setHorizontalGroup(
+            panBotonesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 720, Short.MAX_VALUE)
+        );
+        panBotonesLayout.setVerticalGroup(
+            panBotonesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 83, Short.MAX_VALUE)
+        );
+
         getContentPane().add(panBotones, java.awt.BorderLayout.SOUTH);
 
         pack();
@@ -92,7 +249,23 @@ public class frmUser extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
     private javax.swing.JPanel panBotones;
     private javax.swing.JPanel panControles;
     private javax.swing.JPanel panTitulo;
