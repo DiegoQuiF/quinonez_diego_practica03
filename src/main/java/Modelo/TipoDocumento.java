@@ -1,5 +1,9 @@
 package Modelo;
 
+/**
+ * @author Diego Quiñonez Flores
+ */
+
 public class TipoDocumento {
     private String nombre;
     private int codigo;

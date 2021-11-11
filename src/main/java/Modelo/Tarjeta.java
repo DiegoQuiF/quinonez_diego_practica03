@@ -10,10 +10,21 @@ public class Tarjeta {
     private float saldo;
     private boolean activo;
     private float precio;
-    private static int correlativo = 1;
     private Movimiento movimientos[];
+
+    public Tarjeta(int numero, float saldo, float precio) {
+        this.numero = numero;
+        this.saldo = saldo;
+        this.activo = true;
+        this.precio = precio;;
+    }
     
-    
+    public Tarjeta(int numero, float saldo, float precio, boolean activo) {
+        this.numero = numero;
+        this.saldo = saldo;
+        this.activo = activo;
+        this.precio = precio;;
+    }
     
     
     
