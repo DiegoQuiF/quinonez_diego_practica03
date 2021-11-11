@@ -64,8 +64,12 @@ public class Tarjeta {
     public boolean recargarTarjeta(float monto, Estacion esta) {
         boolean result = false;
         Movimiento mov = new Movimiento(this.indiceMov+1000, "recarga", Configuracion.ddHoy, Configuracion.mmHoy, Configuracion.aaaaHoy, monto);
+        mov.setLugar(esta);
         if((this.isActivo() == true)&&(monto > 0.0f)){
             this.saldo += monto;
+            if(!(this.indiceMov < this.movimientos.length)){
+                aumentarMovimientos();
+            }
             this.movimientos[this.indiceMov] = mov;
             this.indiceMov++;
             result = true;
