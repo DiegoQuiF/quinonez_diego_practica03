@@ -8,51 +8,37 @@ import Programa.Configuracion;
 
 public class User {
     
-    private String aPat;
-    private String aMat;
-    private String nom;
-    private String tDoc;
-    private String doc;
-    private int edad;
-    private int nCel;
-    private Tarjeta[] tarjetas;
-    private int indiceT;
+    private String paterno;
+    private String materno;
+    private String nombres;
+    private String documento;
+    private String tipoDocumento;
+    private Tarjeta tarjetas[];
+    private int indiceTarjeta;
+    private Tarjeta porDefecto;
 
-    public User(String aPat, String aMat, String nom, String tDoc, String doc, int edad, int nCel) {
-        this.aPat = aPat;
-        this.aMat = aMat;
-        this.nom = nom;
-        this.tDoc = tDoc;
-        this.doc = doc;
-        this.edad = edad;
-        this.nCel = nCel;
+    public User(String paterno, String materno, String nombres, String documento, String tipoDocumento) {
+        this.paterno = paterno;
+        this.materno = materno;
+        this.nombres = nombres;
+        this.documento = documento;
+        this.tipoDocumento = tipoDocumento;
+        this.indiceTarjeta = 0;
         this.tarjetas = new Tarjeta[Configuracion.maxTarjetasUser];
-        this.indiceT = 0;
     }
     
-    public User() {
-        this.aPat = "modo invitado";
-        this.aMat = "modo invitado";
-        this.nom = "modo invitado";
-        this.tDoc = "000";
-        this.doc = "00000000";
-        this.edad = 0;
-        this.nCel = 0;
+    public User(String paterno, String nombres, String documento, String tipoDocumento) {
+        this.paterno = paterno;
+        this.nombres = nombres;
+        this.documento = documento;
+        this.tipoDocumento = tipoDocumento;
+        this.indiceTarjeta = 0;
         this.tarjetas = new Tarjeta[Configuracion.maxTarjetasUser];
-        this.indiceT = 0;
     }
     
-     public User(String aPat, String aMat, String nom, String doc, int edad, int nCel) {
-        this.aPat = aPat;
-        this.aMat = aMat;
-        this.nom = nom;
-        this.tDoc = "DNI";
-        this.doc = doc;
-        this.edad = edad;
-        this.nCel = nCel;
-        this.tarjetas = new Tarjeta[Configuracion.maxTarjetasUser];
-        this.indiceT = 0;
-    }
+    
+    
+    
     
     
     
