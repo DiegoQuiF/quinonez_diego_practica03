@@ -27,41 +27,41 @@ public class frmPerfil extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        lblTitulo2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        lblTarjeta = new javax.swing.JLabel();
+        lblUltimosMovimientos = new javax.swing.JLabel();
+        cbbSelecTarjeta = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jLabel4 = new javax.swing.JLabel();
+        tbDatos = new javax.swing.JTable();
+        lblDatosTarjeta = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        tbUMovimientos = new javax.swing.JTable();
         jPanel3 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btnConsumir = new javax.swing.JButton();
+        btnRecargar = new javax.swing.JButton();
+        btnCerrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setFont(new java.awt.Font("Lucida Sans", 1, 23)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 153, 0));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("P E R F I L   D E   U S U A R I O");
+        lblTitulo2.setFont(new java.awt.Font("Lucida Sans", 1, 23)); // NOI18N
+        lblTitulo2.setForeground(new java.awt.Color(0, 153, 0));
+        lblTitulo2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitulo2.setText("P E R F I L   D E   U S U A R I O");
 
         org.jdesktop.layout.GroupLayout jPanel1Layout = new org.jdesktop.layout.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jLabel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
+            .add(lblTitulo2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .add(jLabel1)
+                .add(lblTitulo2)
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -69,16 +69,16 @@ public class frmPerfil extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel2.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
-        jLabel2.setText("TARJETA");
+        lblTarjeta.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
+        lblTarjeta.setText("TARJETA");
 
-        jLabel3.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
-        jLabel3.setText("ULTIMOS MOVIMIENTOS");
+        lblUltimosMovimientos.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
+        lblUltimosMovimientos.setText("ULTIMOS MOVIMIENTOS");
 
-        jComboBox1.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
+        cbbSelecTarjeta.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
 
-        jTable1.setFont(new java.awt.Font("Lucida Sans", 0, 10)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tbDatos.setFont(new java.awt.Font("Lucida Sans", 0, 10)); // NOI18N
+        tbDatos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -86,13 +86,13 @@ public class frmPerfil extends javax.swing.JFrame {
                 "Propietario", "Nro Transacciones", "Saldo actual", "Precio de uso"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tbDatos);
 
-        jLabel4.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
-        jLabel4.setText("DATOS DE LA TARJETA");
+        lblDatosTarjeta.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
+        lblDatosTarjeta.setText("DATOS DE LA TARJETA");
 
-        jTable2.setFont(new java.awt.Font("Lucida Sans", 0, 10)); // NOI18N
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        tbUMovimientos.setFont(new java.awt.Font("Lucida Sans", 0, 10)); // NOI18N
+        tbUMovimientos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -100,7 +100,7 @@ public class frmPerfil extends javax.swing.JFrame {
                 "Propietario", "Nro Tarjeta", "Codigo", "Tipo de T.", "Monto", "Fecha"
             }
         ));
-        jScrollPane2.setViewportView(jTable2);
+        jScrollPane2.setViewportView(tbUMovimientos);
 
         org.jdesktop.layout.GroupLayout jPanel2Layout = new org.jdesktop.layout.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -111,13 +111,13 @@ public class frmPerfil extends javax.swing.JFrame {
                 .add(jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanel2Layout.createSequentialGroup()
                         .add(jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jLabel4)
-                            .add(jLabel3))
+                            .add(lblDatosTarjeta)
+                            .add(lblUltimosMovimientos))
                         .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .add(jPanel2Layout.createSequentialGroup()
-                        .add(jLabel2)
+                        .add(lblTarjeta)
                         .add(31, 31, 31)
-                        .add(jComboBox1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 134, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(cbbSelecTarjeta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 134, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .add(jPanel2Layout.createSequentialGroup()
                 .add(jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -134,14 +134,14 @@ public class frmPerfil extends javax.swing.JFrame {
             .add(jPanel2Layout.createSequentialGroup()
                 .add(20, 20, 20)
                 .add(jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel2)
-                    .add(jComboBox1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(lblTarjeta)
+                    .add(cbbSelecTarjeta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jLabel4)
+                .add(lblDatosTarjeta)
                 .add(18, 18, 18)
                 .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 70, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(18, 18, 18)
-                .add(jLabel3)
+                .add(lblUltimosMovimientos)
                 .add(18, 18, 18)
                 .add(jScrollPane2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 160, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(28, Short.MAX_VALUE))
@@ -151,14 +151,14 @@ public class frmPerfil extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
-        jButton1.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
-        jButton1.setText("CONSUMIR TARJETA");
+        btnConsumir.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
+        btnConsumir.setText("CONSUMIR TARJETA");
 
-        jButton2.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
-        jButton2.setText("RECARGAR TARJETA");
+        btnRecargar.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
+        btnRecargar.setText("RECARGAR TARJETA");
 
-        jButton3.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
-        jButton3.setText("CERRAR SESION");
+        btnCerrar.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
+        btnCerrar.setText("CERRAR SESION");
 
         org.jdesktop.layout.GroupLayout jPanel3Layout = new org.jdesktop.layout.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -166,11 +166,11 @@ public class frmPerfil extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(60, Short.MAX_VALUE)
-                .add(jButton2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 166, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(btnRecargar, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 166, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(57, 57, 57)
-                .add(jButton1)
+                .add(btnConsumir)
                 .add(66, 66, 66)
-                .add(jButton3)
+                .add(btnCerrar)
                 .add(65, 65, 65))
         );
         jPanel3Layout.setVerticalGroup(
@@ -178,9 +178,9 @@ public class frmPerfil extends javax.swing.JFrame {
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(16, Short.MAX_VALUE)
                 .add(jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jButton1)
-                    .add(jButton3)
-                    .add(jButton2))
+                    .add(btnConsumir)
+                    .add(btnCerrar)
+                    .add(btnRecargar))
                 .addContainerGap())
         );
 
@@ -225,21 +225,21 @@ public class frmPerfil extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    public javax.swing.JButton btnCerrar;
+    public javax.swing.JButton btnConsumir;
+    public javax.swing.JButton btnRecargar;
+    public javax.swing.JComboBox<String> cbbSelecTarjeta;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
+    private javax.swing.JLabel lblDatosTarjeta;
+    private javax.swing.JLabel lblTarjeta;
+    private javax.swing.JLabel lblTitulo2;
+    private javax.swing.JLabel lblUltimosMovimientos;
+    public javax.swing.JTable tbDatos;
+    public javax.swing.JTable tbUMovimientos;
     // End of variables declaration//GEN-END:variables
 
 }

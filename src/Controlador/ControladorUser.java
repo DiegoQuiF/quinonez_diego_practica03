@@ -9,6 +9,7 @@ import javax.swing.JOptionPane;
 import Modelo.Usuario;
 import Modelo.ArregloUsuariosIS;
 import Controlador.ControladorInicio;
+import Programa.frmPerfil;
 
 /**
  * @author Diego Quinonez Flores
@@ -18,6 +19,7 @@ public class ControladorUser {
     
     private frmInicio vista;
     private frmUsuario vistaD;
+    private frmPerfil perfil;
     private ArregloUsuariosIS arregloU;
     
     public ControladorUser(frmInicio vista) {
@@ -41,7 +43,9 @@ public class ControladorUser {
         this.vista.btnIniciarS.addActionListener( new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //agregar aquí
+                perfil = new frmPerfil();
+                ControladorPerfil pepe = new ControladorPerfil(perfil);
+                pepe.iniciar();
             }
         });
         
