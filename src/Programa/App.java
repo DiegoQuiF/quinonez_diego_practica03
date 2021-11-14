@@ -21,7 +21,13 @@ public class App {
         ControladorUser controlador = new ControladorUser(finicio);
         controlador.iniciar();
         
+        /*
+        PDT: Aún no se como hacer que interactuen todos los controladores
+        ni como utilizar las tablas de manera dinamica.
         
+        Por lo demás, están los métodos de todas las clases y las vistas,
+        falta hacer que interactuen entre si.
+        */
         
         ArregloUser usuarios = new ArregloUser();
         Estacion A = new Estacion(1526, "Estacion Grau", "Av. Grau");
