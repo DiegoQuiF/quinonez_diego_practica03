@@ -2,11 +2,13 @@
 package Controlador;
 
 import Programa.frmInicio;
+import Programa.frmUsuario;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import Modelo.Usuario;
 import Modelo.ArregloUsuariosIS;
+import Controlador.ControladorInicio;
 
 /**
  * @author Diego Quinonez Flores
@@ -15,6 +17,7 @@ import Modelo.ArregloUsuariosIS;
 public class ControladorUser {
     
     private frmInicio vista;
+    private frmUsuario vistaD;
     private ArregloUsuariosIS arregloU;
     
     public ControladorUser(frmInicio vista) {
@@ -29,7 +32,9 @@ public class ControladorUser {
         this.vista.btnRegistrarse.addActionListener( new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                
+                vistaD = new frmUsuario();
+                ControladorInicio contIni = new ControladorInicio(vistaD);
+                contIni.iniciar();
             }
         });
         
