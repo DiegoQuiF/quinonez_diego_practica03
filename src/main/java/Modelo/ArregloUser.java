@@ -36,12 +36,53 @@ public class ArregloUser {
     public boolean usuarioRegistrado(User usuario) {
         boolean result = false;
         for(int i=0; i<this.indiceUser; i++) {
-            
+            if(this.arregloU[i].getTipoDoc().getNombre() == usuario.getTipoDoc().getNombre()) {
+                if(this.arregloU[i].getDocumento() == usuario.getDocumento()) {
+                    result = true;
+                }
+            }
         }
-        
-        
-        
         return result;
     }
     
+    private void crecerArreglo() {
+        User arregloPlus[] = new User[(this.arregloU.length) + 1];
+        for(int i=0; i<this.indiceUser; i++){
+            arregloPlus[i] = this.arregloU[i];
+        }
+        this.arregloU = arregloPlus;
+    }
+
+    
+    
+    /*public boolean eliminar(Usuario usuario){
+        boolean result = false;
+        
+        return result;
+    }*/
+    
+    /*public boolean eliminar(String documento){
+        boolean result = false;
+        
+        return result;
+    }*/
+    
+    /*public Usuario getUsuario(String documento){
+        Usuario result = null;
+        
+        return result;
+    }*/
+    
+    /*public void ordenarPorPaterno(){
+
+    }
+    
+    public void ordenarPorMaterno(){
+
+    }
+    
+    public void ordenarPorDocumento(){
+
+    }*/
+
 }

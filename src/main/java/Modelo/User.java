@@ -109,9 +109,48 @@ public class User {
         this.porDefecto = porDefecto;
     }
     
+    public boolean crearTarjeta(int numero, float saldo, float precio){
+        boolean result = false;
+        Tarjeta tjt1 = new Tarjeta(numero, saldo, precio);
+        if(this.indiceTarjeta >= this.tarjetas.length) {
+            aumentarTarjetas();
+        }
+        this.tarjetas[this.indiceTarjeta] = tjt1;
+        this.indiceTarjeta++;
+        return result;
+    }
     
     
+    private void aumentarTarjetas(){
+        Tarjeta arregloP[] = new Tarjeta[(this.tarjetas.length) + 1];
+        for(int i=0; i<this.tarjetas.length; i++) {
+            arregloP[i] = this.tarjetas[i];
+        }
+        this.tarjetas = arregloP;  
+    }
     
+    
+    public boolean recargarTarjeta(int numeroT, float monto, Estacion esta){
+        boolean result = false;
+        for(int i=0; i < this.getIndiceTarjeta(); i++) {
+            if(this.tarjetas[i].getNumero() == numeroT){
+                this.tarjetas[i].recargarTarjeta(monto, esta);
+                result = true;
+            }
+        }
+        return result;
+    }
+    
+    public boolean consumirTarjeta(int numeroT, Estacion esta) {
+        boolean result = false;
+        for(int i=0; i < this.getIndiceTarjeta(); i++) {
+            if(this.tarjetas[i].getNumero() == numeroT) {
+                this.tarjetas[i].consumirTarjeta(esta);
+                result = true;
+            }
+        }
+        return result;
+    }
     
     
     
