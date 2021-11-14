@@ -1,10 +1,12 @@
 
 package Programa;
 
+import Programa.frmInicio;
 import Modelo.ArregloUser;
 import Modelo.Estacion;
 import Modelo.Tarjeta;
 import Modelo.User;
+import Controlador.ControladorUser;
 
 /**
  * @author Diego Quinonez Flores
@@ -15,6 +17,12 @@ public class App {
     public static void main (String [] Args) {
         Tarjeta t1, t2, t3;
         User usuario;
+        frmInicio finicio = new frmInicio();
+        ControladorUser controlador = new ControladorUser(finicio);
+        controlador.iniciar();
+        
+        
+        
         ArregloUser usuarios = new ArregloUser();
         Estacion A = new Estacion(1526, "Estacion Grau", "Av. Grau");
         Estacion B = new Estacion(1527, "Estacion Riva Aguero", "Av. Riva Aguero");

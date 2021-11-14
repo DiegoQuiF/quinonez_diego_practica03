@@ -13,5 +13,6 @@ public class Configuracion {
     public static int aaaaHoy = 2021;
     public static int numMovimientos = 3;
     public static int maxUser = 3;
+    public static int maxUsuarios = 5;
     
 }
