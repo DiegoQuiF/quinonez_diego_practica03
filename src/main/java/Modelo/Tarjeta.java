@@ -57,13 +57,14 @@ public class Tarjeta {
         return indiceMov;
     }
 
-    public void setIndiceMov(int indiceMov) {
-        this.indiceMov = indiceMov;
+    public void setIndiceMov() {
+        this.indiceMov++;
     }
     
     public boolean recargarTarjeta(float monto, Estacion esta) {
         boolean result = false;
         Movimiento mov = new Movimiento(this.indiceMov+1000, "recarga", Configuracion.ddHoy, Configuracion.mmHoy, Configuracion.aaaaHoy, monto);
+        this.setIndiceMov();
         mov.setLugar(esta);
         if((this.isActivo() == true)&&(monto > 0.0f)){
             this.saldo += monto;
@@ -77,18 +78,32 @@ public class Tarjeta {
         return result;
     }
     
-    public boolean consumirTarjeta() {
+    public boolean consumirTarjeta(Estacion esta) {
         boolean result = false;
-        
-        
-        
+        Movimiento mov = new Movimiento(this.indiceMov+1000, "consumo", Configuracion.ddHoy, Configuracion.mmHoy, Configuracion.aaaaHoy, this.getPrecio());
+        this.setIndiceMov();
+        mov.setLugar(esta);
+        if((this.isActivo() == true)&&(this.getSaldo() >= this.getPrecio())&&(this.getPrecio() > 0.0f)){
+            this.saldo -= this.precio;
+            if(!(this.indiceMov < this.movimientos.length)){
+                aumentarMovimientos();
+            }
+            this.movimientos[this.indiceMov] = mov;
+            this.indiceMov++;
+            result = true;
+        }
         return result;
     }
     
-    public void aumentarMovimientos() {
-        
-        
-        
+    private boolean aumentarMovimientos() {
+        boolean result = false;
+        Movimiento nuevosMovimientos[] = new Movimiento[(this.movimientos.length) + 1];
+        for(int i=0; i<this.movimientos.length; i++){
+            nuevosMovimientos[i] = this.movimientos[i];
+        }
+        this.movimientos = nuevosMovimientos;
+        result = true;
+        return result;
     }
     
 }
